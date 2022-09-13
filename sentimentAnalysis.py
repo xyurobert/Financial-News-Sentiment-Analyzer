@@ -140,8 +140,10 @@ for item in articles:
         newsitem = item.find('h3', first=True) 
         title = newsitem.text
         if(classifier.classify(dict([token, True] for token in title)) == "Positive"):
+            #print(title + ": " + "positive")
             numPositive = numPositive + 1
         elif (classifier.classify(dict([token, True] for token in title)) == "Negative"):
+            #print(title + ": " + "positive")            
             numNegative = numNegative + 1
     except:
         pass
